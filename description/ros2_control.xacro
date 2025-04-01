@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <ros2_control name="Robot" type="System">
+    <ros2_control name="RealRobot" type="System">
         <hardware>
             <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
             <param name="left_wheel_name">left_wheel_joint</param>
@@ -29,10 +29,4 @@
             <state_interface name="position"/>
         </joint>
     </ros2_control>
-
-    <gazebo>
-        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find my_bot)/config/my_controllers.yaml</parameters>
-        </plugin>
-    </gazebo>
 </robot>
